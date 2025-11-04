@@ -1,142 +1,190 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Racon Multiservice</title>
-<style>
-  body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f4f4;color:#333}
-  header{background:#2c3e50;color:#fff;padding:2rem 1rem;text-align:center}
-  h1{margin:0;font-size:2.2rem}
-  main{max-width:1100px;margin:2rem auto;padding:0 1rem}
-  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
-  .card{background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.1);padding:1rem;text-align:center;position:relative;overflow:visible}
-  .card img{max-width:100%;height:180px;object-fit:contain;border-radius:6px;margin-bottom:1rem;transition:transform .3s ease,box-shadow .3s ease;cursor:pointer;position:relative;z-index:1}
-  .card img:hover{transform:scale(2.2);box-shadow:0 18px 40px rgba(0,0,0,.55);z-index:1000;position:relative}
-  .controls{display:none;justify-content:center;gap:.4rem;margin-bottom:1rem;flex-wrap:wrap}
-  .controls button,.controls label{background:#2980b9;color:#fff;border:none;padding:.3rem .7rem;font-size:.85rem;border-radius:4px;cursor:pointer}
-  .link-input{display:none;width:90%;padding:.4rem;border:1px solid #ccc;border-radius:4px;margin-bottom:.5rem}
-  .link-display a{color:#2980b9;text-decoration:none;font-weight:600}
-  .note{text-align:center;font-size:.95rem;color:#555;margin-top:2rem}
-  footer{text-align:center;padding:1rem;color:#777;font-size:.9rem}
-  #editBtn{display:block;margin:1rem auto;padding:.5rem 1.5rem;background:#2980b9;color:#fff;border:none;border-radius:5px;cursor:pointer}
-  #editBtn:hover{background:#3498db}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Racoon Multiservice</title>
+  <style>
+    /* Your CSS here (paste/keep your updated styles) */
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Racoon Multiservice</h1>
+    <p>Your gateway to amazing products from trusted companies.</p>
+  </header>
 
-<header>
-  <h1>Racon Multiservice</h1>
-  <p>Your gateway to amazing products from trusted companies.</p>
-</header>
+  <button id="editButton">Editar contenido</button>
 
-<button id="editBtn">Editar contenido</button>
+  <div id="loginBox">
+    <h3>Inicio de sesión</h3>
+    <input type="text" id="username" placeholder="Usuario" />
+    <button id="loginBtn">Entrar</button>
+  </div>
 
-<main>
-  <section class="gallery">
-    <div class="card" data-slot="1"><img alt="Slot 1"><div class="controls"><label for="upload1">Add</label><input id="upload1" type="file" accept="image/*" hidden><button class="remove-btn">Remove</button></div><input class="link-input" placeholder="Enter link"><div class="link-display"></div></div>
-    <div class="card" data-slot="2"><img alt="Slot 2"><div class="controls"><label for="upload2">Add</label><input id="upload2" type="file" accept="image/*" hidden><button class="remove-btn">Remove</button></div><input class="link-input" placeholder="Enter link"><div class="link-display"></div></div>
-    <div class="card" data-slot="3"><img alt="Slot 3"><div class="controls"><label for="upload3">Add</label><input id="upload3" type="file" accept="image/*" hidden><button class="remove-btn">Remove</button></div><input class="link-input" placeholder="Enter link"><div class="link-display"></div></div>
-    <div class="card" data-slot="4"><img alt="Slot 4"><div class="controls"><label for="upload4">Add</label><input id="upload4" type="file" accept="image/*" hidden><button class="remove-btn">Remove</button></div><input class="link-input" placeholder="Enter link"><div class="link-display"></div></div>
-    <div class="card" data-slot="5"><img alt="Slot 5"><div class="controls"><label for="upload5">Add</label><input id="upload5" type="file" accept="image/*" hidden><button class="remove-btn">Remove</button></div><input class="link-input" placeholder="Enter link"><div class="link-display"></div></div>
-  </section>
-  <p class="note">To buy, please click the link under each picture.</p>
-</main>
+  <main>
+    <section class="gallery">
+      <div class="card" data-slot="1">
+        <img alt="Slot 1" />
+        <div class="controls">
+          <label for="upload1">Add</label>
+          <input type="file" id="upload1" accept="image/*" hidden />
+          <button class="remove-btn">Remove</button>
+        </div>
+        <input type="text" class="link-input" placeholder="Enter link (https://...)" />
+        <div class="link-display"></div>
+      </div>
+      <div class="card" data-slot="2">
+        <img alt="Slot 2" />
+        <div class="controls">
+          <label for="upload2">Add</label>
+          <input type="file" id="upload2" accept="image/*" hidden />
+          <button class="remove-btn">Remove</button>
+        </div>
+        <input type="text" class="link-input" placeholder="Enter link (https://...)" />
+        <div class="link-display"></div>
+      </div>
+      <div class="card" data-slot="3">
+        <img alt="Slot 3" />
+        <div class="controls">
+          <label for="upload3">Add</label>
+          <input type="file" id="upload3" accept="image/*" hidden />
+          <button class="remove-btn">Remove</button>
+        </div>
+        <input type="text" class="link-input" placeholder="Enter link (https://...)" />
+        <div class="link-display"></div>
+      </div>
+      <div class="card" data-slot="4">
+        <img alt="Slot 4" />
+        <div class="controls">
+          <label for="upload4">Add</label>
+          <input type="file" id="upload4" accept="image/*" hidden />
+          <button class="remove-btn">Remove</button>
+        </div>
+        <input type="text" class="link-input" placeholder="Enter link (https://...)" />
+        <div class="link-display"></div>
+      </div>
+      <div class="card" data-slot="5">
+        <img alt="Slot 5" />
+        <div class="controls">
+          <label for="upload5">Add</label>
+          <input type="file" id="upload5" accept="image/*" hidden />
+          <button class="remove-btn">Remove</button>
+        </div>
+        <input type="text" class="link-input" placeholder="Enter link (https://...)" />
+        <div class="link-display"></div>
+      </div>
+    </section>
+    <p class="note">To buy, please click the link under each picture.</p>
+  </main>
 
-<footer>&copy; 2025 Racon Multiservice. All rights reserved.</footer>
+  <footer>&copy; 2025 Racoon Multiservice. All rights reserved.</footer>
+  
+  <!-- Google APIs JS -->
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script>
+    // Your Sheets info
+    const SHEET_ID = "10CD1tdzFXI-Sdvvi3rEF5OLmCjdr3_QOA3oQTfwhhvc";
+    const API_KEY = "AIzaSyBzJfgSEcypczZWdv8siP0ThHjbknW5fhY";
+    let loggedIn = false;
 
-<script src="https://apis.google.com/js/api.js"></script>
-<script>
-const SHEET_ID = "10CD1tdzFXI-Sdvvi3rEF5OLmCjdr3_QOA3oQTfwhhvc";
-const API_KEY = "850035190849";
+    function initClient() {
+      gapi.client.init({
+        apiKey: API_KEY,
+        discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"]
+      }).then(loadData, err=>console.error("initClient error",err));
+    }
+    gapi.load('client', initClient);
 
-let loggedIn = false;
+    function loadData() {
+      gapi.client.sheets.spreadsheets.values.get({
+        spreadsheetId: SHEET_ID,
+        range: "Sheet1!A2:C6"
+      }).then(resp=>{
+        const values = resp.result.values || [];
+        document.querySelectorAll('.card').forEach((card, idx)=>{
+          const img = card.querySelector('img');
+          const linkDisplay = card.querySelector('.link-display');
+          const linkInput = card.querySelector('.link-input');
+          const row = values[idx]||[];
+          const imageUrl = row[1]||"";
+          const productLink = row[2]||"";
+          img.src = imageUrl || `https://via.placeholder.com/250x180.png?text=Slot+${idx+1}`;
+          linkDisplay.innerHTML = productLink ? `<a href="${productLink}" target="_blank" rel="noopener">Go to link</a>` : "";
+          if(loggedIn && linkInput) linkInput.value = productLink||"";
+        });
+      }).catch(err=>{
+        console.error("Error loading Sheets data:",err);
+      });
+    }
 
-function initClient() {
-  gapi.client.init({
-    apiKey: API_KEY,
-    discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"]
-  }).then(loadData, err=>console.error(err));
-}
-gapi.load('client', initClient);
+    function saveData(slot,imageUrl,linkUrl){
+      const row = parseInt(slot)+1;
+      const values=[[slot,imageUrl||"",linkUrl||""]];
+      gapi.client.sheets.spreadsheets.values.update({
+        spreadsheetId:SHEET_ID,
+        range:`Sheet1!A${row}:C${row}`,
+        valueInputOption:'RAW',
+        resource:{values:values}
+      }).then(()=>loadData())
+      .catch(err=>{console.error("Error saving to Sheets",err);alert("Error guardando en Sheets");});
+    }
 
-function loadData() {
-  gapi.client.sheets.spreadsheets.values.get({
-    spreadsheetId: SHEET_ID,
-    range: "Sheet1!A2:C6"
-  }).then(resp=>{
-    const values = resp.result.values || [];
-    document.querySelectorAll('.card').forEach((card, idx)=>{
-      const img = card.querySelector('img');
-      const linkDisplay = card.querySelector('.link-display');
-      const linkInput = card.querySelector('.link-input');
-      const row = values[idx]||[];
-      const imageUrl = row[1]||"";
-      const productLink = row[2]||"";
-      img.src = imageUrl||`https://via.placeholder.com/250x180.png?text=Slot+${idx+1}`;
-      linkDisplay.innerHTML = productLink?`<a href="${productLink}" target="_blank" rel="noopener">Go to link</a>`:"";
-      if(loggedIn && linkInput) linkInput.value = productLink||"";
+    // Login logic
+    const loginBox = document.getElementById("loginBox");
+    const editButton = document.getElementById("editButton");
+    editButton.addEventListener("click", () => {
+      if (!loggedIn) loginBox.style.display = "block";
     });
-  }).catch(err=>console.error("Error Sheets:",err));
-}
+    document.getElementById("loginBtn").addEventListener("click", () => {
+      const user = document.getElementById("username").value.trim();
+      if (user === "teacheralex62") {
+        loggedIn = true;
+        loginBox.style.display = "none";
+        document.querySelectorAll(".controls, .link-input").forEach(el => el.style.display = "flex");
+        loadData();
+        alert("Modo edición activado ✅");
+      } else {
+        alert("Usuario incorrecto ❌");
+      }
+    });
 
-function saveData(slot,imageUrl,linkUrl){
-  const row = slot+1;
-  const values=[[slot,imageUrl||"",linkUrl||""]];
-  gapi.client.sheets.spreadsheets.values.update({
-    spreadsheetId:SHEET_ID,
-    range:`Sheet1!A${row}:C${row}`,
-    valueInputOption:'RAW',
-    resource:{values:values}
-  }).then(()=>loadData())
-  .catch(err=>{console.error(err);alert("Error guardando en Sheets");});
-}
+    document.querySelectorAll('.card').forEach((card,idx)=>{
+      const slot = card.dataset.slot;
+      const img = card.querySelector('img');
+      const uploadInput = card.querySelector('input[type="file"]');
+      const removeBtn = card.querySelector('.remove-btn');
+      const linkInput = card.querySelector('.link-input');
+      const linkDisplay = card.querySelector('.link-display');
 
-document.getElementById('editBtn').addEventListener('click',()=>{
-  const user = prompt("Ingresa tu usuario:");
-  if(user==="teacheralex62"){
-    loggedIn=true;
-    document.querySelectorAll('.controls').forEach(c=>c.style.display='flex');
-    document.querySelectorAll('.link-input').forEach(i=>i.style.display='block');
-    loadData();
-    alert("Modo edición activado.");
-  }else alert("Usuario incorrecto.");
-});
+      uploadInput.addEventListener('change',e=>{
+        if(!loggedIn) return alert("Solo el usuario puede editar.");
+        const file=e.target.files[0];
+        if(!file) return;
+        const reader=new FileReader();
+        reader.onload=ev=>{
+          const dataUrl=ev.target.result; // base64 URL
+          saveData(slot,dataUrl,linkInput.value||"");
+        };
+        reader.readAsDataURL(file);
+      });
 
-document.querySelectorAll('.card').forEach((card,idx)=>{
-  const slot=idx+1;
-  const img=card.querySelector('img');
-  const uploadInput=card.querySelector('input[type="file"]');
-  const removeBtn=card.querySelector('.remove-btn');
-  const linkInput=card.querySelector('.link-input');
-  const linkDisplay=card.querySelector('.link-display');
+      removeBtn.addEventListener('click',()=>{
+        if(!loggedIn) return alert("Solo el usuario puede editar.");
+        img.src=`https://via.placeholder.com/250x180.png?text=Slot+${slot}`;
+        saveData(slot,"",linkInput.value||"");
+      });
 
-  uploadInput.addEventListener('change',e=>{
-    if(!loggedIn)return alert("Solo el usuario puede editar.");
-    const file=e.target.files[0];
-    if(!file)return;
-    const reader=new FileReader();
-    reader.onload=ev=>{
-      const dataUrl=ev.target.result;
-      saveData(slot,dataUrl,linkInput.value||"");
-    };
-    reader.readAsDataURL(file);
-  });
+      linkInput.addEventListener('change',()=>{
+        if(!loggedIn) return alert("Solo el usuario puede editar.");
+        saveData(slot,img.src||"",linkInput.value||"");
+        linkDisplay.innerHTML=linkInput.value?`<a href="${linkInput.value}" target="_blank" rel="noopener">Go to link</a>`:"";
+      });
+    });
 
-  removeBtn.addEventListener('click',()=>{
-    if(!loggedIn)return alert("Solo el usuario puede editar.");
-    img.src=`https://via.placeholder.com/250x180.png?text=Slot+${slot}`;
-    saveData(slot,"",linkInput.value||"");
-  });
+    // Auto-refresh every 5s (read-only mode)
+    setInterval(()=>{if(!loggedIn)loadData();},5000);
 
-  linkInput.addEventListener('change',()=>{
-    if(!loggedIn)return alert("Solo el usuario puede editar.");
-    saveData(slot,img.src||"",linkInput.value||"");
-    linkDisplay.innerHTML=linkInput.value?`<a href="${linkInput.value}" target="_blank" rel="noopener">Go to link</a>`:"";
-  });
-});
-
-setInterval(()=>{if(!loggedIn)loadData();},5000);
-</script>
+  </script>
 </body>
 </html>
